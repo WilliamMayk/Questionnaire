@@ -34,7 +34,18 @@ const firebaseConfig = {
     var choice1 = getElementVal("flexChoice1");
     var choice2 = getElementVal("flexChoice2");
 
-    saveMessages(industry, address, person, email, phoneNumber, url, socialProfiles, onlineMarketplaces, Kpi, option1, option2, choice1, choice2)
+    saveMessages(industry, address, person, email, phoneNumber, url, socialProfiles, onlineMarketplaces, Kpi, option1, option2, choice1, choice2);
+
+    // enable alert
+    document.querySelector('.alert').style.display = "block";
+
+    //remove alert
+    setTimeout(() => {
+      document.querySelector('.alert').style.display = "none";
+    }, 3000);
+
+    // reset the form
+    document.getElementById('questionnaireForm').reset();
   }
 
   const saveMessages = (name, industry, address, person, email, phoneNumber, url, socialProfiles, onlineMarketplaces, Kpi, flexOption1, flexOption2, flexChoice1, flexChoice2) => {
