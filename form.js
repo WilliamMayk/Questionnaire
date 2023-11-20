@@ -27,9 +27,21 @@ const firebaseConfig = {
     var url = getElementVal("inputUrl");
     var socialProfiles = getElementVal("inputSocialProfiles");
     var onlineMarketplaces = getElementVal("onlineMarketplaces");
-    var KPI = getElementVal("inputKPI");
+    var Kpi = getElementVal("inputKPI");
     var option1 = getElementVal("flexOption1");
     var option2 = getElementVal("flexOption2");
+
+    console.log(industry,
+            address,
+            person,
+            email,
+            phoneNumber,
+            url,
+            socialProfiles,
+            onlineMarketplaces,
+            Kpi,
+            option1,
+            option2);
   }
 
   const getElementVal = (id) => {
