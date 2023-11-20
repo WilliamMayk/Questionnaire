@@ -30,6 +30,9 @@ const firebaseConfig = {
     var Kpi = getElementVal("inputKPI");
     var option1 = getElementVal("flexOption1");
     var option2 = getElementVal("flexOption2");
+    var choice1 = getElementVal("flexChoice1");
+    var choice2 = getElementVal("flexChoice2");
+
 
     console.log(industry,
             address,
@@ -41,7 +44,10 @@ const firebaseConfig = {
             onlineMarketplaces,
             Kpi,
             option1,
-            option2);
+            option2,
+            choice1,
+            choice2
+            );
   }
 
   const getElementVal = (id) => {
