@@ -1,3 +1,8 @@
+import firebase from 'firebase/app'
+import {
+  getFirestore
+} from 'firebase/firestore'
+
 const firebaseConfig = {
     apiKey: "AIzaSyATfGoWCBIbBMxiAk79vCfB4Kzt5xqmwBE",
     authDomain: "questionnaire-form-746af.firebaseapp.com",
