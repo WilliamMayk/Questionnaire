@@ -12,9 +12,9 @@ const firebaseConfig = {
   firebase.initializeApp(firebaseConfig);
 
   //reference the database
-  var questionnaireFormDB = firebase.database().ref('questionnaireForm');
+  var questionnaireFormDB = firebase.database().ref("questionnaireForm");
 
-  document.getElementById('questionnaireForm').addEventListener("submit",submitForm )
+  document.getElementById("questionnaireForm").addEventListener("submit",submitForm )
 
   function submitForm(e) {
     e.preventDefault();
@@ -37,15 +37,15 @@ const firebaseConfig = {
     saveMessages(companyName, industry, address, person, email, phoneNumber, url, socialProfiles, onlineMarketplaces, Kpi, option1, option2, choice1, choice2);
 
     // enable alert
-    document.querySelector('.alert').style.display = "block";
+    document.querySelector(".alert").style.display = "block";
 
     //remove alert
     setTimeout(() => {
-      document.querySelector('.alert').style.display = "none";
+      document.querySelector(".alert").style.display = "none";
     }, 3000);
 
     // reset the form
-    document.getElementById('questionnaireForm').reset();
+    document.getElementById("questionnaireForm").reset();
   }
 
   const saveMessages = (companyName, inputIndustry, inputAddress, inputPerson, inputEmail, inputPhoneNumber, inputUrl, inputSocialProfiles, onlineMarketplaces, inputKPI, flexOption1, flexOption2, flexChoice1, flexChoice2) => {
@@ -68,7 +68,7 @@ const firebaseConfig = {
       choice2: flexChoice2,
       
     });
-  }
+  };
 
   const getElementVal = (id) => {
     return document.getElementById(id).value;
