@@ -47,3 +47,5 @@ const firebaseConfig = {
   const getElementVal = (id) => {
     return document.getElementById(id).value;
   }
+
+  //13:10
