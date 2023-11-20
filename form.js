@@ -19,7 +19,8 @@ const firebaseConfig = {
   function submitForm(e) {
     e.preventDefault();
 
-    var industry = getElementVal("companyName");
+    var name = getElementVal("companyName");
+    var industry = getElementVal("inputIndustry");
     var address = getElementVal("inputAddress");
     var person = getElementVal("inputPerson");
     var email = getElementVal("inputEmail");
@@ -33,21 +34,29 @@ const firebaseConfig = {
     var choice1 = getElementVal("flexChoice1");
     var choice2 = getElementVal("flexChoice2");
 
+    saveMessages(industry, address, person, email, phoneNumber, url, socialProfiles, onlineMarketplaces, Kpi, option1, option2, choice1, choice2)
+  }
 
-    console.log(industry,
-            address,
-            person,
-            email,
-            phoneNumber,
-            url,
-            socialProfiles,
-            onlineMarketplaces,
-            Kpi,
-            option1,
-            option2,
-            choice1,
-            choice2
-            );
+  const saveMessages = (name, industry, address, person, email, phoneNumber, url, socialProfiles, onlineMarketplaces, Kpi, flexOption1, flexOption2, flexChoice1, flexChoice2) => {
+    var newQuestionnaireForm = questionnaireFormDB.push();
+
+    newQuestionnaireForm.set({
+      name: companyName, 
+      industry: inputIndustry,
+      address: inputAddress,
+      person: inputPerson, 
+      email: inputEmail,
+      phoneNumber: inputPhoneNumber,
+      url: inputUrl,
+      socialProfiles: inputSocialProfiles,
+      onlineMarketplaces: onlineMarketplaces,
+      Kpi: inputKPI,
+      option1: flexOption1,
+      option2: flexOption2,
+      choice1: flexChoice1,
+      choice2: flexChoice2,
+      
+    });
   }
 
   const getElementVal = (id) => {
