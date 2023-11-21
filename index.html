@@ -15,58 +15,58 @@
                 <h2>Questionnaire</h2>
             </div>
             <div class="card-body">
-                <form name="contact" class="row g-3 rounded bg-white shadow p-5" id="questionnaireForm" action="post" data-netlify="true">
+                <form name="contact" class="row g-3 rounded bg-white shadow p-5" id="questionnaireForm" method="post" data-netlify="true" onSubmit="submit">
                     <div class="alert" id="name">Your message sent</div>
                     <div class="form-group col-md-6">
                         <label for="companyName" class="form-label">Company Name:</label>
-                        <input type="text" class="form-control" id="inputCompanyName">
+                        <input type="text" class="form-control" id="inputCompanyName" name="Company name">
                     </div>
                     <div class="form-group col-md-6">
                         <label for="inputIndustry" class="form-label">Industry:</label>
-                        <input type="text" class="form-control" id="inputIndustry">
+                        <input type="text" class="form-control" id="inputIndustry" name="Industry">
                     </div>
                     <div class="form-group col-12">
                         <label for="inputAddress" class="form-label">Address:</label>
-                        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Accra">
+                        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Accra" name="Address">
                     </div>
                     <div class="form-group col-12">
                         <label for="inputPerson" class="form-label">Contact Person:</label>
-                        <input type="text" class="form-control" id="inputPerson" placeholder="John Doe">
+                        <input type="text" class="form-control" id="inputPerson" placeholder="John Doe" name="Person">
                     </div>
                     <div class="form-group col-md-6">
                         <label for="inputEmail" class="form-label">Contact Email:</label>
-                        <input type="email" class="form-control" id="inputEmail" placeholder="youremail@gmail.com">
+                        <input type="email" class="form-control" id="inputEmail" placeholder="youremail@gmail.com" name="Email">
                     </div>
                     <div class="form-group col-md-6">
                         <label for="inputPhoneNumber" class="form-label">Contact Phone Number:</label>
-                        <input type="number" class="form-control" id="inputPhoneNumber" placeholder="054 345 8756">
+                        <input type="number" class="form-control" id="inputPhoneNumber" placeholder="054 345 8756" name="number">
                     </div>
                     <div class="form-group col-md-12">
                         <label for="inputUrl" class="form-label">Website URL:</label>
-                        <input type="url" class="form-control" id="inputUrl" placeholder="https://yourorganisation.com">
+                        <input type="url" class="form-control" id="inputUrl" placeholder="https://yourorganisation.com" name="url">
                     </div>
                     <div class="form-group col-md-6">
                         <label for="inputSocialProfiles" class="form-label">Social Media Profiles (if any):</label>
-                        <input type="text" class="form-control" id="inputSocialProfiles">
+                        <input type="text" class="form-control" id="inputSocialProfiles" name="Social Media">
                     </div>
                     <div class="form-group col-md-6">
                         <label for="inputOnlineMarketplaces" class="form-label">Online Marketplaces (if applicable):</label>
-                        <input type="text" class="form-control" id="inputOnlineMarketplaces">
+                        <input type="text" class="form-control" id="inputOnlineMarketplaces" name="Online Marketplace">
                     </div>
                     <div class="form-group col-md-12">
                         <label for="inputKPI" class="form-label">What are your company's primary KPI for the program? (e.g., brand awareness, lead generation, sales growth, etc.):</label>
-                        <input type="text" class="form-control" id="inputKPI">
+                        <input type="text" class="form-control" id="inputKPI" name="Kpi">
                     </div>
                     <div class="form-group">
                         <label for="inputTargetedRegion" class="form-label">Which specific French-speaking countries or regions are you looking to target through the program? (select option):</label>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="Radio" id="flexOption1">
+                            <input class="form-check-input" type="radio" name="Radio" id="flexOption1" name="French countries">
                             <label class="form-check-label" for="flexOption1">
                               Francophone West Africa
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="Radio" id="flexOption2" >
+                            <input class="form-check-input" type="radio" name="Radio" id="flexOption2" name="French countries">
                             <label class="form-check-label" for="flexOption2">
                               Francophone Central Africa
                             </label>
@@ -75,13 +75,13 @@
                     <div class="form-group">
                         <label for="inputTargetedRegion" class="form-label">Do you need a Market Study to help you to decide better which French speaking country or region to target?</label>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="flexRadio" id="flexChoice1">
+                            <input class="form-check-input" type="radio" name="flexRadio" id="flexChoice1" name="market study">
                             <label class="form-check-label" for="flexChoice1">
                               Yes
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="flexRadio" id="flexChoice2" >
+                            <input class="form-check-input" type="radio" name="flexRadio" id="flexChoice2" name="market study" >
                             <label class="form-check-label" for="flexChoice2">
                               No
                             </label>
@@ -89,15 +89,15 @@
                     </div>
                     <div class="form-group col-md-6">
                         <label for="inputMarketingBudget" class="form-label">What is your estimated budget for this program?:</label>
-                        <input type="number" class="form-control" id="inputMarketingBudget" inputmode="numeric" pattern="[0-9]">
+                        <input type="number" class="form-control" id="inputMarketingBudget" inputmode="numeric" pattern="[0-9]" name="budget">
                     </div>
                     <div class="form-group col-md-12">
                         <label for="inputMarketingGoals" class="form-label">Have you participated in similar international marketing programs before? Ig yes, please describe your experience.</label>
-                        <input type="text" class="form-control" id="inputMarketingGoals">
+                        <input type="text" class="form-control" id="inputMarketingGoals" name="participation">
                     </div>
                     <div class="form-group col-md-12">
                         <label for="inputComments" class="form-label">Is there any other information or specific requirements you would like to share with the program coordinators?</label>
-                        <input type="text" class="form-control" id="inputComments">
+                        <input type="text" class="form-control" id="inputComments" name="more information">
                     </div>
                     <div class="d-grip gqp-2 d-md-block">
                         <button type="submit" id="submitForm" value="Submit" class="btn bg-info text-white opacity-75 col-md-1" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">Submit</button>
