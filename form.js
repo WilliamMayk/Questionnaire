@@ -1,4 +1,4 @@
-import firebase from 'firebase/app'
+import { initializeApp } from 'firebase/app'
 import {
   getFirestore
 } from 'firebase/firestore'
@@ -14,7 +14,7 @@ const firebaseConfig = {
   };
 
   //initialize firebase
-  firebase.initializeApp(firebaseConfig);
+  const app = initializeApp(firebaseConfig);
 
   //reference the database
   var questionnaireFormDB = firebase.database().ref("questionnaireForm");
