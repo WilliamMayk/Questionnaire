@@ -65,7 +65,7 @@ const firebaseConfig = {
       phoneNumber: inputPhoneNumber,
       url: inputUrl,
       socialProfiles: inputSocialProfiles,
-      onlineMarketplaces: onlineMarketplaces,
+      onlineMarketplaces: inputOnlineMarketplaces,
       Kpi: inputKPI,
       option1: flexOption1,
       option2: flexOption2,
